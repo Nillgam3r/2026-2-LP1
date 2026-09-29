@@ -1,5 +1,11 @@
+//instrucciones de pre_procesamiento
 #include<stdio.h>
 #define ANIO_ACTUAL 2026
+
+#ifndef __linux__
+#define __SO__ "Windows"
+#else
+#define __SO__ "Linux"
 ////////////////////Zona de prototipos
 int devolver_anio_actual();
 void saludar()
@@ -7,7 +13,8 @@ void saludar()
 //funcion principal (main), aqui comienza todo
 int main(){
     //LLamada o uso funcion
-    saludar(); //Toda funcion que se use, debe estar declarada y/o defininda
+    saludar();//Toda funcion que se use, debe estar declarada y/o defininda
+    printf("El sistema operativo actual es %s",__SO__);
     return 0;
 }
 
