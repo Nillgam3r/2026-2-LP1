@@ -42,5 +42,6 @@ int main(void) {
 }
 
 4. Discusión: ¿Por qué las variables globales son una mala práctica en Ingeniería de Software? Mencionar al menos tres razones (acoplamiento, dificultad de testeo, condiciones de carrera en concurrencia).
-- Dado que la variable es global es modificable para cualquier función entonces es propenso a errores de acuerdo al caso base de cada función dada, significa que si una función funciona específicamente con un valor inicial el cual fue modificado por otra anteriormente esta dará un error.
-
+- Acoplamiento alto: Cualquier módulo puede leerlas/modificarlas, creando dependencias ocultas. Cambiar una obliga a revisar todo el sistema.
+- Dificultad de testeo: El estado compartido entre tests genera resultados no deterministas y obliga a "limpiar" el entorno no se puede probar una función de forma aislada.
+- Condiciones de carrera: Funciones accediendo a la misma variable sin sincronización producen datos corruptos o comportamientos intermitentes difíciles de reproducir.
