@@ -24,4 +24,4 @@ int main() {
  printf("No se pudo leer el registro.\n");
  }
  fclose(archivo);
- return 0;
+ return 0;}
