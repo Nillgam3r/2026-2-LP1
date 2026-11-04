@@ -17,6 +17,6 @@ int main() {
  }
  }
  printf("\n\nTotal de bytes leidos: %d\n", posicion);
- fclose(archivo)
+ fclose(archivo);
  return 0;
 }
