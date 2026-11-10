@@ -9,6 +9,7 @@ struct Alumno {
     int edad;
 };
 
+//
 void mostrar(struct Alumno a){
     printf("Codigo      :%d\n", a.codigo);
     printf("Nombre      :%s\n", a.nombre);
